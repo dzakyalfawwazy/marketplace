@@ -15,23 +15,6 @@ class ProductdetailSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        $faker = Factory::create();
-        $fakerproduct = Factory::create();
-        $fakerproduct->addProvider(new Commerce($fakerproduct));
-        foreach (range(1, 60) as $index) {
-            $product = productdetail::factory()->create([
-                'idproduct' => $faker->numberBetween(1, 20),
-                'weight' => $faker->numberBetween(30, 2000),
-                'size' => $faker->randomElement(['M', 'S', 'XL', 'None']),
-                'color' => $faker->colorName(),
-                'baseprice' => $faker->numberBetween(1000, 2000000),
-                'sellprice' => $faker->numberBetween(1000, 2000000),
-                'description' => $faker->paragraph(3),
-                'image' => $faker->imageUrl(640, 480, 'product', true),
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        }
+        productdetail::factory(20)->create();
     }
 }

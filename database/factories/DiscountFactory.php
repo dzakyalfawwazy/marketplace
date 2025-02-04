@@ -18,6 +18,10 @@ class DiscountFactory extends Factory
     {
         return [
             //
+            'name' => 'Discount ' . $this->faker->word,
+            'desc' => $this->faker->sentence,
+            'discount_percent' => $this->faker->randomFloat(2, 5, 50),
+            'active' => $this->faker->boolean,
         ];
     }
 }

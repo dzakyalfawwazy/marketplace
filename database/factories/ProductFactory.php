@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\categories;
+use App\Models\discount;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +21,9 @@ class ProductFactory extends Factory
     {
         return [
             //
+            'desc' => $this->faker->paragraph,
+            'category_id' => categories::inRandomOrder()->first()->id,
+            'discount_id' => discount::inRandomOrder()->first()->id ?? null,
         ];
     }
 }

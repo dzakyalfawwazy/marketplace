@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\varianproducts;
-use App\Http\Requests\StorevarianproductsRequest;
-use App\Http\Requests\UpdatevarianproductsRequest;
+use App\Models\productsimages;
+use App\Http\Requests\StoreproductsimagesRequest;
+use App\Http\Requests\UpdateproductsimagesRequest;
 
-class VarianproductsController extends Controller
+class ProductsimagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class VarianproductsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorevarianproductsRequest $request)
+    public function store(StoreproductsimagesRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class VarianproductsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(varianproducts $varianproducts)
+    public function show(productsimages $productsimages)
     {
         //
     }
@@ -43,7 +43,7 @@ class VarianproductsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(varianproducts $varianproducts)
+    public function edit(productsimages $productsimages)
     {
         //
     }
@@ -51,7 +51,7 @@ class VarianproductsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatevarianproductsRequest $request, varianproducts $varianproducts)
+    public function update(UpdateproductsimagesRequest $request, productsimages $productsimages)
     {
         //
     }
@@ -59,7 +59,7 @@ class VarianproductsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(varianproducts $varianproducts)
+    public function destroy(productsimages $productsimages)
     {
         //
     }

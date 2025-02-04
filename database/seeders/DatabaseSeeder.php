@@ -24,8 +24,10 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this ->call(RolepermisionSeeder::class);
         $this ->call(CategorySeeder::class);
+        $this ->call(VariantproductsSeeder::class);
         $this ->call(ProductSeeder::class);
         $this ->call(ProductdetailSeeder::class);
+        $this ->call(ProductsimagesSeeder::class);
 
         // categories::factory()->count(10)->create();
     }

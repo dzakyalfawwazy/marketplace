@@ -18,8 +18,8 @@ class CategoriesFactory extends Factory
     {
         return [
             //
-            'categoriesname' => $this->faker->word,
-            'remarks' =>$this->faker->text(),
+            'name' => $this->faker->word,
+            'desc' =>$this->faker->text(),
         ];
     }
 }

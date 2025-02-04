@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\variantproducts;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProductsinventoriesSeeder extends Seeder
+class VariantproductsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,5 +14,6 @@ class ProductsinventoriesSeeder extends Seeder
     public function run(): void
     {
         //
+        variantproducts::factory()->create();
     }
 }

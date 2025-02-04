@@ -12,14 +12,14 @@ class product extends Model
 
     protected $table = 'products';
 
-    protected $fillable = ['nameproduct', 'idcategory', 'description'];
+    protected $fillable = ['name', 'category_id', 'desc'];
 
     public function category()
     {
-        return $this->belongsTo(categories::class, 'idcategory', 'id');
+        return $this->belongsTo(categories::class, 'category_id', 'id');
     }
     public function productsdetail()
     {
-        return $this->hasMany(productdetail::class, 'idproduct', 'id');
+        return $this->hasMany(productdetail::class, 'products_id', 'id');
     }
 }

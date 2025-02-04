@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\productsinventories;
-use App\Http\Requests\StoreproductsinventoriesRequest;
-use App\Http\Requests\UpdateproductsinventoriesRequest;
+use App\Models\variantproducts;
+use App\Http\Requests\StorevariantproductsRequest;
+use App\Http\Requests\UpdatevariantproductsRequest;
 
-class ProductsinventoriesController extends Controller
+class VariantproductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ProductsinventoriesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreproductsinventoriesRequest $request)
+    public function store(StorevariantproductsRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ProductsinventoriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(productsinventories $productsinventories)
+    public function show(variantproducts $variantproducts)
     {
         //
     }
@@ -43,7 +43,7 @@ class ProductsinventoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(productsinventories $productsinventories)
+    public function edit(variantproducts $variantproducts)
     {
         //
     }
@@ -51,7 +51,7 @@ class ProductsinventoriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateproductsinventoriesRequest $request, productsinventories $productsinventories)
+    public function update(UpdatevariantproductsRequest $request, variantproducts $variantproducts)
     {
         //
     }
@@ -59,7 +59,7 @@ class ProductsinventoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(productsinventories $productsinventories)
+    public function destroy(variantproducts $variantproducts)
     {
         //
     }

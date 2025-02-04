@@ -13,16 +13,13 @@ return new class extends Migration
     {
         Schema::create('productdetails', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('idproduct')->unsigned();
-            $table->foreign('idproduct')->references('id')->on('products')->onDelete('cascade');
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->foreignId('variant_id')->constrained('variantproducts')->onDelete('cascade');
+            $table->string('value');
             $table->decimal('weight');
-            $table->string('size')->default('None');
-            $table->string('color')->default('None');
-            $table->decimal('baseprice',10,2)->default(0);
-            $table->decimal('sellprice',10,2)->default(0);
-            $table->text('description')->nullable();
-            $table->text('image')->nullable();
-            $table->decimal('stock')->default(0);
+            $table->decimal('baseprice', 10, 2);
+            $table->decimal('sellprice', 10, 2);
+            $table->text('desc')->nullable();
             $table->timestamps();
         });
     }

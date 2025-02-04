@@ -8,6 +8,7 @@ use Faker\Factory;
 use Faker\Provider\Commerce;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class ProductSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         //
-        $user = User::hasRoles('store')->inRandomOrder()->first();
+        $user = User::role('store')->inRandomOrder()->first();
 
         $faker = Factory::create();
         $fakerproduct = Factory::create();
@@ -25,10 +26,8 @@ class ProductSeeder extends Seeder
 
         foreach (range(1, 20) as $index) {
             $product = product::factory()->create([
-                'nameproduct' => $fakerproduct->productname(),
-                'idcategory' => $faker->numberBetween(1, 10),
-                'iduser' => $user->id,
-                'description' => $faker->text(100),
+                'name' => $fakerproduct->productname(),
+                'user_id' => $user,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

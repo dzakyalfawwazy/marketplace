@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\productsinventories>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\variantproducts>
  */
-class ProductsinventoriesFactory extends Factory
+class VariantproductsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,6 +18,7 @@ class ProductsinventoriesFactory extends Factory
     {
         return [
             //
+            'name' => 'Size'
         ];
     }
 }
